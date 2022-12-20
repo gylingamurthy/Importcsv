@@ -1,0 +1,14 @@
+student.add_student_form:
+  path: 'admin/student/add'
+  defaults:
+    _entity_form: student.add_student
+    _title: 'Add student'
+  requirements:
+    _permission: 'administer site configuration'
+student.import_form:
+  path: 'admin/student/import'
+  defaults:
+    _form: '\Drupal\student\Form\ImportercsvForm'
+    _title: 'Import student'
+  requirements:
+    _permission: 'administer site configuration'
