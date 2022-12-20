@@ -1,0 +1,4 @@
+services:
+ csv.save:
+   class: Drupal\student\EntityCsvServices
+   arguments: ['@entity_type.manager']
