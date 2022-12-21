@@ -78,7 +78,7 @@ class EntityCsvServices {
        $entity->save();
 
      }
-     \Drupal::messenger()->addMessage($i.t('Record Added '));
+     \Drupal::messenger()->addMessage(($i-1).t('Record Added '));
 
  }
 
