@@ -9,6 +9,8 @@ use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\student\EntityCsvServices;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Configure regional settings for this site.
@@ -153,6 +155,20 @@ protected function getEditableConfigNames() {
       '#type' => 'submit',
       '#value' => $this->t('Import'),
       '#button_type' => 'primary',
+    ];
+
+    $furl1 = Url::fromUserInput('/link/student');
+    $furl2 = Url::fromUserInput('/link/result');
+
+    $form['student_link'] = [
+      '#type' => 'markup',
+      '#markup' => Link::fromTextAndUrl('Download Student sample csv file', $furl1)->toString(),
+    ];
+    $form['result_link'] = [
+      '#type' => 'markup',
+      '#markup' => Link::fromTextAndUrl('Download Result sample csv file', $furl2)->toString(),
+      '#prefix' => '<div>',
+      '#suffix' => '</div>',
     ];
 
 
