@@ -10,6 +10,8 @@ similarly for the stresult it should have 3 columns csv file must contains that 
 
 In the configuration Form of csv import has entity type dropdown box which has multiple entires out those select only "student" or "stresult" which are custom entity
 
+Add sample files(student.csv, result.csv) to /site/default/files/downloads
+
 
 
 
