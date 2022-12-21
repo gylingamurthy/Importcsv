@@ -12,3 +12,11 @@ student.import_form:
     _title: 'Import student'
   requirements:
     _permission: 'administer site configuration'
+shorturl.redirect:
+  path: '/link/{scode}'
+  defaults:
+    _title: 'Links'
+    _controller: '\Drupal\student\Controller\StudentController::downloadurl'
+  scode: 'support-request'
+  requirements:
+    _permission: 'access content
